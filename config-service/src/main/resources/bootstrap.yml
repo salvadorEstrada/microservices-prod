@@ -1,13 +1,18 @@
 server:
   port: 8081
+  error:
+    include-message: always
+    include-binding-errors: always
 spring:
   cloud:
     config:
       server:
-        git: https://github.com/salvadorEstrada/microservices-prod.git
-        searchPaths: config-data
-        username: ${GIT_USER}
-        password: ${GIT_PASSWORD}
+        git:
+          uri: https://github.com/salvadorEstrada/microservices-prod.git
+          searchPaths: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          default-label: "server-config"
   security:
     user:
       name: root
