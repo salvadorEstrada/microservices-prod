@@ -20,21 +20,21 @@ public class Customer implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "El número de documento no puede ser vacío")
-    @Size( min = 8 , max = 8, message = "El tamaño del número de documento es 8")
+    @NotEmpty(message = "El numero de documento no puede ser vacio")
+    @Size( min = 8 , max = 8, message = "El tamayo del numero de documento es 8")
     @Column(name = "number_id" , unique = true ,length = 8, nullable = false)
     private String numberID;
 
-    @NotEmpty(message = "El nombre no puede ser vacío")
+    @NotEmpty(message = "El nombre no puede ser vacio")
     @Column(name="first_name", nullable=false)
     private String firstName;
 
-    @NotEmpty(message = "El apellido no puede ser vacío")
+    @NotEmpty(message = "El apellido no puede ser vacio")
     @Column(name="last_name", nullable=false)
     private String lastName;
 
-    @NotEmpty(message = "el correo no puede estar vacío")
-    @Email(message = "no es un dirección de correo bien formada")
+    @NotEmpty(message = "el correo no puede estar vacio")
+    @Email(message = "no es un direccion de correo bien formada")
     @Column(unique=true, nullable=false)
     private String email;
 
@@ -42,7 +42,7 @@ public class Customer implements Serializable {
     private String photoUrl;
 
 
-    @NotNull(message = "la región no puede ser vacia")
+    @NotNull(message = "la region no puede ser vacia")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")
     @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })

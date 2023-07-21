@@ -1,6 +1,6 @@
-INSERT INTO tbl_regions (id, name) VALUES (1, 'Sudamérica');
-INSERT INTO tbl_regions (id, name) VALUES (2, 'Centroamérica');
-INSERT INTO tbl_regions (id, name) VALUES (3, 'Norteamérica');
+INSERT INTO tbl_regions (id, name) VALUES (1, 'Sudamerica');
+INSERT INTO tbl_regions (id, name) VALUES (2, 'Centroamerica');
+INSERT INTO tbl_regions (id, name) VALUES (3, 'Norteamerica');
 INSERT INTO tbl_regions (id, name) VALUES (4, 'Europa');
 INSERT INTO tbl_regions (id, name) VALUES (5, 'Asia');
 INSERT INTO tbl_regions (id, name) VALUES (6, 'Africa');
